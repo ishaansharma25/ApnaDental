@@ -156,7 +156,6 @@ img{
 }
 .scrollToTop:hover,
 .scrollToTop:focus{
-	background-color: #fff;
 	text-decoration: none;
 	outline: none;
 }
@@ -2838,6 +2837,42 @@ a.gallery-iteam:hover .image-effect::before {
 .slider-text h2 {font-size: 25px;line-height: 30px;}
 .slider-text p {font-size: 16px;}
 }
+
+
+@media(max-width:300px ){
+	.navbar-brand {float: left;font-size: 20px;width: 250px;}
+	.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -31%; width:80%}
+	.navbar-brand > i {font-size: 25px;}
+	.slider-text {width: 90%;}
+	.sl-slider-wrapper {height: 420px;}
+	.counter-box::after {width: 107%;}
+	.blog-breadcrumbs-left {text-align: center;width: 100%;}
+	.blog-breadcrumbs-right {width: 100%;}
+	.blog-pagination .pagination > li > a, .blog-pagination .pagination > li > span {
+	 font-size: 15px;
+	 padding: 5px 12px;
+	}
+	.blog-breadcrumbs-right .breadcrumb {padding: 8px;}
+	.blog-details h2 {font-size: 20px;line-height: 30px;margin-bottom: 10px;margin-top: 10px;}
+	.blog-details blockquote {font-size: 16px;}
+	.social-share ul li > a {font-size: 14px;height: 25px;line-height: 26px;width: 25px;}
+	.social-share h3 {font-size: 20px;}
+	.nav-tabs > li > a {font-size: 10px;padding: 3px;}
+	.custom-panel .panel-heading a {font-size: 16px;}
+	#myModal .modal-title {font-size: 25px;}
+	.post-author .news-img {margin-right: 0px;width: 45px;height: 45px;}
+	.author-name {font-size: 13px;margin-bottom: 5px;display: block;}
+	.post-author p {font-size: 12px;line-height: 18px;}
+	.commentlist .news-img {height: 45px;width: 45px;}
+	.children {margin-left: 15px;}
+	.commentlist .media-body p {font-size: 12px;}
+	.error-page-area h1 {font-size: 150px;}
+	.error-page-area h3 {font-size: 50px;margin-bottom: 70px;}
+	.error-page-area h5 {font-size: 25px;}
+	.slider-text h2 {font-size: 25px;line-height: 30px;}
+	.slider-text p {font-size: 16px;}
+	}
+	
 
 
 @media(max-width:320px ){

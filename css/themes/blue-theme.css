@@ -3,10 +3,10 @@
 Template Design By WpFreeware Team.
 Author URI : http://www.wpfreeware.com/
 ========================================*/
-.scrollToTop {
+/* .scrollToTop {
   background-color: darkcyan !important;
   border:1px solid darkcyan !important;
-}
+} */
 .scrollToTop:hover, .scrollToTop:focus,.readmore_area a::before,.sl-slider h2> strong,.sl-slider p> strong,
 .single-top-feature .readmore_area a span,.service-icon-effect,.service-icon .service-icon-effect:hover,.single-service>h3 a:hover,.single-service>h3 a:focus,
 .whyChoose-right .media-heading,.whyChoose-right .media:hover .media-icon,.doctors-nav figcaption h2,
