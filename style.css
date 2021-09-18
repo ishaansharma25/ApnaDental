@@ -2761,10 +2761,15 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:767px ){
+	.navbar-brand img {
+		width: 100%;
+		height: 360%;
+		padding-top: 16px;
+	}
 .navbar-default .navbar-toggle {border-color: darkcyan;margin-top: 12px;}
 .navbar-default .navbar-toggle .icon-bar {background-color: darkcyan;}
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{background-color: transparent;}
-.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -8%;}
+.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -6%;}
 #sliderArea {margin-top: 70px;}
 .navbar-right .dropdown-menu::before {display: none;}
 .whychoose-singleslide img {width: 100%;}
@@ -2805,6 +2810,11 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:360px ){
+.navbar-brand img {
+		width: 100%;
+		height: 360%;
+		padding-top: 18px;
+}
 .navbar-brand {float: left;font-size: 20px;width: 250px;}
 .navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -9%;}
 .navbar-brand > i {font-size: 25px;}
