@@ -165,7 +165,7 @@ jQuery(function($){
 	    if ($(this).scrollTop() > 300) {
 	      $('.scrollToTop').fadeIn();
 	    } else {
-	      $('.scrollToTop').fadeOut();
+	      $('.scrollToTop').fadeIn();
 	    }
 	  });
 	   

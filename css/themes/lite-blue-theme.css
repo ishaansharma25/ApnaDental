@@ -21,7 +21,7 @@ Author URI : http://www.wpfreeware.com/
   color: #37c6f5;   
 }
 .navbar-default {
-  background-color: #37c6f5;
+  background-color: white;
   border-color: #37c6f5; 
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover,

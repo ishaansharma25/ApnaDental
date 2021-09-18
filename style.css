@@ -43,6 +43,13 @@ font-family: 'Habibi', serif;
 overflow-x: hidden !important;
 }
 
+.navbar-brand img {
+	width: 140%;
+	height: 380%;
+	padding-top: 10px;
+}
+
+
 ul{
   padding: 0;
   margin: 0;
@@ -120,6 +127,8 @@ img{
 /*scrol to top*/
 
 .scrollToTop {
+	all: initial;
+	font-size: xx-large;
 	bottom: 60px;
 	display: none;
 	font-size: 32px;
@@ -139,7 +148,8 @@ img{
 	-ms-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
-
+	border-radius: 50% !important;
+	font-size: 2cm;
 }
 .scrollToTop>i{
 	 transform:rotate(-45deg);
@@ -150,6 +160,8 @@ img{
 	text-decoration: none;
 	outline: none;
 }
+
+
 
 /*--------------------*/
 /* HEADER */
@@ -166,7 +178,7 @@ img{
 	width: 100%;	
 }
 .navbar-default .navbar-nav > li > a {	
-	color: #fff;
+	color: darkcyan !important;
 	position: relative;
 	display: inline-block;	
 	outline: none;	
@@ -212,17 +224,16 @@ img{
 .navbar-default .navbar-nav > li > a:hover::before,
 .navbar-default .navbar-nav > li > a:focus::before,
 .navbar-default .navbar-nav > .active > a::before {
-	color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
+	text-shadow: 10px 0 darkcyan -10px 0 darkcyan;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-	color: #fff;
+	color:darkcyan !important;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-  color: #fff;	
+  color: darkcyan !important;	
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
@@ -496,7 +507,7 @@ img{
 .slider-text {
   left: 0;
   margin: 0 auto;
-  padding: 100px 30px 10px;
+  padding: 38px 0px 0px;
   position: absolute;
   right: 0;
   top: 10%;
