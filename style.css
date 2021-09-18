@@ -2762,10 +2762,10 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:767px ){
-.navbar-default .navbar-toggle {border-color: #fff;margin-top: 12px;}
-.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
+.navbar-default .navbar-toggle {border-color: darkcyan;margin-top: 12px;}
+.navbar-default .navbar-toggle .icon-bar {background-color: darkcyan;}
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{background-color: transparent;}
-.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: 0;}
+.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -6%;}
 #sliderArea {margin-top: 70px;}
 .navbar-right .dropdown-menu::before {display: none;}
 .whychoose-singleslide img {width: 100%;}

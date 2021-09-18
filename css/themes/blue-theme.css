@@ -20,7 +20,7 @@ Author URI : http://www.wpfreeware.com/
   color: darkcyan !important;   
 }
 .navbar-default {
-  background-color: darkblue;
+  background-color: white !important;
   border-color: darkcyan !important; 
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover,
@@ -30,7 +30,7 @@ Author URI : http://www.wpfreeware.com/
 .single-top-feature .readmore_area a::before,.testimonial-nav .slick-dots li.slick-active,figure.blog-figure .image-effect::before,
 .footer-middle,.social-share ul li > a,.custom-panel .panel-heading a,.nav-tabs > li > a,a.gallery-iteam .image-effect::before,.comments-title::after,
 .reply-btn,.author-tag  {
-  background-color: white;
+  background-color: darkcyan;
 }
 .navbar-right .dropdown-menu,.navbar-nav .open .dropdown-menu,
 .wp-form-control:focus {
@@ -153,10 +153,10 @@ Author URI : http://www.wpfreeware.com/
   border: 1px solid darkcyan !important;
 }
 .pswp__caption__center {
-  color: darkcyan !important !important;
+  color: darkcyan !important;
 }
 .pswp__button--arrow--left::before, .pswp__button--arrow--right::before {
-  background-color: darkcyan !important !important;    
+  background-color: darkcyan !important;    
 }
 .comments-pagination li a:hover {
   background-color:darkcyan !important;
