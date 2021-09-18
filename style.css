@@ -45,7 +45,7 @@ overflow-x: hidden !important;
 
 .navbar-brand img {
 	width: 140%;
-	height: 380%;
+	height: 360%;
 	padding-top: 10px;
 }
 
@@ -2840,6 +2840,11 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:300px ){
+	.navbar-brand img {
+		width: 100%;
+		height: 360%;
+		padding-top: 18px;
+	}
 	.navbar-brand {float: left;font-size: 20px;width: 250px;}
 	.navbar-default .navbar-brand {margin-bottom: 10px;margin-top: -31%; width:80%}
 	.navbar-brand > i {font-size: 25px;}
