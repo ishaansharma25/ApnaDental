@@ -11,7 +11,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>Apka Dental</title>
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+     <script>function scrollme(id)
+      {
+           var scrollElem = scrollableElement('html', 'body');
+           var targetOffset = $(id).offset().top;
+            $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
+      
+                });
+      }
+      function scrollableElement(els)
+      {
+          for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+            var el = arguments[i],
+                $scrollElement = $(el);
+            if ($scrollElement.scrollTop()> 0) {
+              return el;
+            } else {
+              $scrollElement.scrollTop(1);
+              var isScrollable = $scrollElement.scrollTop()> 0;
+              $scrollElement.scrollTop(0);
+              if (isScrollable) {
+                return el;
+              }
+            }
+          }
+          return [];
+      }</script>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,36 +114,14 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="index.html"  style="background-color: white;">Home</a></li>
-                <li><a href="features.html" style="color: darkcyan;">Features</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+               
+                <li><a onclick="scrollme(meetDoctors)">About Us</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Service <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="medical-counseling.html">Medical Counseling</a></li>
-                    <li><a href="medical-research.html">Medical Research</a></li>
-                    <li><a href="blood-bank.html">Blood Bank</a></li>
-                  </ul>
+                  <a role="button" aria-expanded="false" onclick="scrollme(service)">Services</a>
+                 
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="blog-archive.html">Blog Archive</a></li>
-                    <li><a href="blog-archive-with-left-sidebar.html">Blog Archive with Left Sidebar</a></li>
-                    <li><a href="blog-archive-with-right-sidebar.html">Blog Archive with Right Sidebar</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                    <li><a href="blog-single-with-left-sidebar.html">Blog Single with Left Sidebar</a></li>
-                    <li><a href="blog-single-with-right-sidebar.html">Blog Single with Right Sidebar</a></li>           
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Page <span class="fa fa-angle-down"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="404.html">404 Page</a></li>
-                    <li><a href="#">Link Two</a></li>
-                    <li><a href="#">Link Three</a></li>               
-                  </ul>
-                </li>               
+              
                 <li><a href="contact.html">Contact</a></li>
               </ul>           
             </div><!--/.nav-collapse -->
@@ -337,10 +344,10 @@
                   <div class="col-lg-4 col-md-4">
                     <div class="single-service">
                       <div class="service-icon">
-                        <img class="img-service" src="images/dental-implants-1.jpg" alt="img"> 
+                        <img class="img-service" src="images/Dental-Fillings.jpg" alt="img"> 
                       </div>                      
-                      <h3><a href="#">Fluoride Application</a></h3>
-                      <p>Fluoride treatments in the form of a highly concentrated rinse, foam, gel, or varnish.</p>
+                      <h3><a href="#">Dental Fillings</a></h3>
+                      <p>Dental Fillings are the dental procedures where the cavities on the tooth are removed from a decayed tooth. Space is then filled with suitable dental material to protect it from getting further decayed. Material like porcelain, gold, silver amalgam, plastics, and few other types of material can be used for dental fillings.</p>
                     </div>
                   </div>
                 </div>
@@ -349,30 +356,30 @@
                   <div class="col-lg-4 col-md-4">
                     <div class="single-service">
                       <div class="service-icon">
-                        <span class="fa fa-medkit service-icon-effect"></span>  
+                        <img class="img-service" src="images/Tooth-Extraction-Procedure.jpg" alt="img">  
                       </div>                      
-                      <h3><a href="#">Root Canal Treatment</a></h3>
-                      <p>Save a badly damaged or infected tooth by cleaning of the canals inside a tooth's root.</p>
+                      <h3><a href="#">Tooth Extraction</a></h3>
+                      <p>Tooth Extraction involves the removal of the tooth from the dental sockets. When the tooth gets badly damaged due to decay, crack, or any other reason, it becomes necessary for the tooth extraction. Tooth extraction is done only in the situation where it is not possible to protect the damaged tooth from any treatment.</p>
                     </div>
                   </div>
                   <!-- Start Single Service -->
                   <div class="col-lg-4 col-md-4">
                     <div class="single-service">
                       <div class="service-icon">
-                        <span class="fa fa-user-md service-icon-effect"></span>  
+                        <img class="img-service" src="images/teeth-cleaning.jpg" alt="img"> 
                       </div>                      
-                      <h3><a href="#">Crowns & Bridges</a></h3>
-                      <p>Crowns and bridges are a fixed solution to missing or damaged teeth. This is a restorative procedure</p>
+                      <h3><a href="#">Teeth Cleaning and Polishing</a></h3>
+                      <p>Teeth Cleaning treatment is done when the teeth become more yellowish or brownish. It usually occurs due to the development of plaque or tartar on it. The teeth cleaning process involves cleaning the teeth with the spray of water and dental solution mixture. It makes the teeth look cleaner.</p>
                     </div>
                   </div>
                   <!-- Start Single Service -->
                   <div class="col-lg-4 col-md-4">
                     <div class="single-service">
                       <div class="service-icon">
-                        <span class="fa fa-ambulance service-icon-effect"></span>  
+                        <img class="img-service" src="images/Overdentures-1.jpg" alt="img"> 
                       </div>                      
-                      <h3><a href="#">Dental X-Ray</a></h3>
-                      <p>Dental x-rays are quick, painless, and expose the patient to a minimal amount of low-level radiation.</p>
+                      <h3><a href="#">Overdentures</a></h3>
+                      <p>Overdentures are placed properly with the support of dental implants. They can replace one or more teeth easily with a simple dental application that is detachable. Losing teeth tends to disturb the jaw bone structure. Overdenture is helpful in restoring the original structure of the jaw bone.</p>
                     </div>
                   </div>
                 </div>
@@ -769,7 +776,9 @@
                 <h2>About Us</h2>
                 <div class="line"></div>
               </div>           
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+              <p>At Apka Dentist, we provide better dental treatment services within budget-friendly prices. We are one of the well-known dental treatment service providers in India. We strive to achieve dental awareness in India by providing dental checkups & X-rays for free.
+
+                We provide different dental treatments like RCT (Root Canal Treatment), Cavity Filling, Extraction, Dental Implants, Braces and Orthodontic Treatment, Full Mouth Rehabilitation, and different other treatments.</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
@@ -779,11 +788,11 @@
                 <div class="line"></div>
               </div>
               <ul class="footer-service">
-                <li><a href="#"><span class="fa fa-check"></span>Service 1</a></li>
-                <li><a href="#"><span class="fa fa-check"></span>Service 2</a></li>
-                <li><a href="#"><span class="fa fa-check"></span>Service 3</a></li>
-                <li><a href="#"><span class="fa fa-check"></span>Service 4</a></li>
-                <li><a href="#"><span class="fa fa-check"></span>Service 5</a></li>
+                <li><a href="#"><span class="fa fa-check"></span>Root Canal</a></li>
+                <li><a href="#"><span class="fa fa-check"></span>Dental Implants</a></li>
+                <li><a href="#"><span class="fa fa-check"></span>Dental Fillings</a></li>
+                <li><a href="#"><span class="fa fa-check"></span>Tooth Extraction</a></li>
+                <li><a href="#"><span class="fa fa-check"></span>Teeth Cleaning and Polishing</a></li>
               </ul>
               </div>
             </div>
