@@ -226,10 +226,39 @@ img{
 	transform: translateX(-50%);
 	pointer-events: none;
 }
+
+.tab p {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+    
+.tab p:last-child {
+    margin-right: 0px;
+}
+    
+.tab p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: #8C076E;
+    -webkit-transition: .5s;
+    transition: .5s
+}
+    
+.tab p:hover:before {
+    width: 100%
+}
+
 .navbar-default .navbar-nav > li > a:hover::before,
 .navbar-default .navbar-nav > li > a:focus::before,
 .navbar-default .navbar-nav > .active > a::before {
-	text-shadow: 10px 0 darkcyan -10px 0 darkcyan;
+	text-shadow: 10px 0 black -10px 0 black;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
