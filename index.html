@@ -12,6 +12,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>Apka Dental</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script type="text/javascript">
+      function sendEmail() {
+        console.log("Code has reached here");
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "eshaansharma3@gmail.com",
+          Password: "tnwXxkA@01",
+          To: "eshaansharma3@gmail.com",
+          From: "eshaansharma3@gmail.com",
+          Subject: "Sending Email using javascript",
+          Body: "Well that was easy!!",
+        })
+          .then(function (message) {
+            alert("mail sent successfully")
+          });
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
@@ -159,7 +177,6 @@
             <h2><strong style="color: darkcyan;">CONNECTING DENTISTS</strong> </h2>
             <p> </p>
             <div class="readmore_area">
-              <!-- <a data-hover="Read More" href="#"><span>Read More</span></a>                 -->
             </div>
           </div>
         </div>
@@ -186,10 +203,11 @@
             <div class="single-top-feature">
               <span class="fa fa-flask"></span>
               <h3>Emergency Care</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-              <div class="readmore_area">
+              <p style="font-family: Arial, Helvetica, sans-serif;">For any Dental Emergency we are just a call away <br><br>
+                Phone Number: +91 8168804355</p>
+              <!-- <div class="readmore_area">
                 <a href="#" data-hover="Read More"><span>Read More</span></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -204,15 +222,15 @@
               <ul class="opening-table">
                 <li>
                   <span>Monday - Friday</span>
-                  <div class="value">24X7 service</div>
+                  <div class="value" style="font-family: Arial, Helvetica, sans-serif;">24X7 service</div>
                 </li>
                 <li>
                   <span>Saturday</span>
-                  <div class="value">9:30AM - 2:30PM & 4:30PM - 8PM</div>
+                  <div class="value" style="font-family: Arial, Helvetica, sans-serif;">9:30AM - 2:30PM & 4:30PM - 8PM</div>
                 </li>
                 <li>
                   <span>Sunday</span>
-                  <div class="value">9:30AM - 8PM</div>
+                  <div class="value" style="font-family: Arial, Helvetica, sans-serif;">9:30AM - 8PM</div>
                 </li>
               </ul>              
             </div>
@@ -226,7 +244,6 @@
             <div class="single-top-feature">
               <span class="fa fa-hospital-o"></span>
               <h3>Appointment</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
               <div class="readmore_area">
                 <a data-toggle="modal" data-target="#myModal" href="#" data-hover="Appoinment"><span>Appoinment</span></a>    
               </div>
@@ -290,7 +307,7 @@
                           </div>         
                           <input type="text" class="wp-form-control wpcf7-text" placeholder="Subject">
                           <textarea class="wp-form-control wpcf7-textarea" cols="30" rows="10" placeholder="What would you like to tell us"></textarea>
-                         <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Book Appointment</span></button>  
+                         <button class="wpcf7-submit button--itzel" type="submit" onclick="sendEmail()"><i class="button__icon fa fa-share"></i><span>Book Appointment</span></button>  
                         </form>
                       </div>
                     </div>                    
@@ -412,6 +429,10 @@
                     <div class="whychoose-singleslide">
                       <img src="images/choose-us-img1.jpg" alt="img">
                     </div>
+                    <form method="post">
+                      <input type="button" value="Send Email" 
+                          onclick="sendEmail()" />
+                    </form>
                     <div class="whychoose-singleslide">
                       <img src="images/choose-us-img2.jpg" alt="img">
                     </div>
@@ -430,8 +451,8 @@
                       </a>
                     </div>
                     <div class="media-body">
-                      <h4 class="media-heading">Great Infrastructure</h4>
-                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>  
+                      <h4 class="media-heading">Full range of Dental Services</h4>
+                      <p>You can opt for any of the wide array of quality dental services at our office, including advanced dental procedures, which ensures oral health</p>  
                     </div>
                   </div>
                   <div class="media">
@@ -441,20 +462,11 @@
                       </a>
                     </div>
                     <div class="media-body">
-                      <h4 class="media-heading">Qualified Doctors</h4>
-                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>  
+                      <h4 class="media-heading">Convenient Hours</h4>
+                      <p>Our dental staff is available on weekend and in the evening so that all our patients, especially the busy ones, receives the quality dental care.</p>  
                     </div>
                   </div>
                   <div class="media">
-                    <div class="media-left">
-                      <a href="#" class="media-icon">
-                        <span class="fa fa-ambulance"></span>
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">Emergency Support</h4>
-                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>  
-                    </div>
                   </div>
                 </div>
               </div>
@@ -471,34 +483,34 @@
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <div class="counter-area">
-              <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="counter-box">
                   <div class="counter-no counter">
-                    200
+                    10
                   </div>
                   <div class="counter-label">Doctors</div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-6">
+              <div class="col-lg-4 col-md-4 col-sm-4">
                  <div class="counter-box">
                   <div class="counter-no counter">
-                    300
+                    20
                   </div>
                   <div class="counter-label">Clinic Rooms</div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-6">
+              <!-- <div class="col-lg-3 col-md-3 col-sm-6">
                  <div class="counter-box">
                   <div class="counter-no counter">
                     350
                   </div>
                   <div class="counter-label">Awards</div>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6">
+              </div> -->
+              <div class="col-lg-4 col-md-4 col-sm-4">
                  <div class="counter-box">
                   <div class="counter-no counter">
-                    450
+                    2000
                   </div>
                   <div class="counter-label">Happy Patients</div>
                 </div>
@@ -527,10 +539,55 @@
                     <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                         <figure>
-                          <img src="images/doctor-1.jpg" />
+                          <img src="images/20210218_223052-removebg-preview.png" />
                           <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
                           <figcaption>
                             <h2>Dr. Sagar Sharma</h2>
+                            <p>Oro-Dental Surgeon</p>
+                            <button>View</button>             
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <div class="single-doctor-social">
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-google-plus"></span></a>
+                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="single-doctor">
+                      <div class="single-doctor">
+                      <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+                        <figure>
+                          <img src="images/20210910_155702.jpg" />
+                          <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                          <figcaption>
+                            <h2>DR. Bhushan Verma</h2>
+                            <p>Prosthodontist</p>
+                            <button>View</button>             
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <div class="single-doctor-social">
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-google-plus"></span></a>
+                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                      </div>
+                    </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="single-doctor">
+                      <div class="single-doctor">
+                      <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+                        <figure>
+                          <img src="images/doctor-3.jpeg" />
+                          <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                          <figcaption>
+                            <h2>Dr. Sunaina Vedwal</h2>
                             <p>Dental Surgeon</p>
                             <button>View</button>             
                           </figcaption>
@@ -543,17 +600,18 @@
                         <a href="#"><span class="fa fa-linkedin"></span></a>
                       </div>
                     </div>
-                  </li>
-                  <li>
+                    </div>
+                  </li> 
+                 <li>
                     <div class="single-doctor">
                       <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                         <figure>
-                          <img src="images/doctor-2.jpg" />
+                          <img src="images/doctor-4.0.jpg" />
                           <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
                           <figcaption>
-                            <h2>DR. Jack Johnson</h2>
-                            <p>Rehabilitation Therapy</p>
+                            <h2>Dr. Pallavi Agrawal</h2>
+                            <p>General Dentist</p>
                             <button>View</button>             
                           </figcaption>
                         </figure>
@@ -566,54 +624,8 @@
                       </div>
                     </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="single-doctor">
-                      <div class="single-doctor">
-                      <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
-                        <figure>
-                          <img src="images/doctor-3.jpg" />
-                          <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
-                          <figcaption>
-                            <h2>Dr. Vanessa Smouic</h2>
-                            <p>Cardiac Clinic</p>
-                            <button>View</button>             
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <div class="single-doctor-social">
-                        <a href="#"><span class="fa fa-facebook"></span></a>
-                        <a href="#"><span class="fa fa-twitter"></span></a>
-                        <a href="#"><span class="fa fa-google-plus"></span></a>
-                        <a href="#"><span class="fa fa-linkedin"></span></a>
-                      </div>
-                    </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="single-doctor">
-                      <div class="single-doctor">
-                      <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
-                        <figure>
-                          <img src="images/doctor-5.jpg" />
-                          <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
-                          <figcaption>
-                            <h2>Dr. David Gresshoff</h2>
-                            <p>Laryngological Clinic</p>
-                            <button>View</button>             
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <div class="single-doctor-social">
-                        <a href="#"><span class="fa fa-facebook"></span></a>
-                        <a href="#"><span class="fa fa-twitter"></span></a>
-                        <a href="#"><span class="fa fa-google-plus"></span></a>
-                        <a href="#"><span class="fa fa-linkedin"></span></a>
-                      </div>
-                    </div>
-                    </div>
-                  </li>
-                   <li>
+                  </li> -->
+                   <!-- <li>
                     <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                         <figure>
@@ -633,8 +645,8 @@
                         <a href="#"><span class="fa fa-linkedin"></span></a>
                       </div>
                     </div>
-                  </li>
-                  <li>
+                  </li> -->
+                  <!-- <li>
                     <div class="single-doctor">
                       <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
@@ -656,8 +668,8 @@
                       </div>
                     </div>
                     </div>
-                  </li>
-                  <li>
+                  </li> -->
+                  <!-- <li>
                     <div class="single-doctor">
                       <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
@@ -679,8 +691,8 @@
                       </div>
                     </div>
                     </div>
-                  </li>
-                  <li>
+                  </li> -->
+                  <!-- <li>
                     <div class="single-doctor">
                       <div class="single-doctor">
                       <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
@@ -702,7 +714,7 @@
                       </div>
                     </div>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -720,41 +732,18 @@
             <div class="testimonial-area">
              <!-- Start Service Title -->
               <div class="section-heading">
-                <h2>What our patients said</h2>
+                <h2>What our patients have to say</h2>
                 <div class="line"></div>
               </div>
               <div class="testimonial-area">
                 <ul class="testimonial-nav">
-                  <li>
-                    <div class="single-testimonial">
-                      <div class="testimonial-img">
-                        <img src="images/patients-3.jpg" alt="img">
-                      </div>
-                      <div class="testimonial-cotent">
-                        <p class="testimonial-parg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.There are many variations of passages of Lorem Ipsum available.</p>
-                      </div>
-                    </div>
-                  </li> 
-                  <li>
-                    <div class="single-testimonial">
-                      <div class="testimonial-img">
-                        <img src="images/patients-1.jpg" alt="img">
-                      </div>
-                      <div class="testimonial-cotent">
-                        <p class="testimonial-parg">There are many variations of passages of Lorem Ipsum available.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                      </div>
-                    </div>
-                  </li> 
-                  <li>
-                    <div class="single-testimonial">
-                      <div class="testimonial-img">
-                        <img src="images/patients-2.jpg" alt="img">
-                      </div>
-                      <div class="testimonial-cotent">
-                        <p class="testimonial-parg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.There are many variations of passages of Lorem Ipsum available.</p>
-                      </div>
-                    </div>
-                  </li>                 
+                  
+                  <video width="400" height="400" controls style="margin: 0px 34%;">
+                    <source src="images/videos/121155333_697544451114672_6648154636064840611_n (online-video-cutter.com).mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
+                                  
                 </ul>
               </div>
             </div>
@@ -818,10 +807,9 @@
                 <h2>Contact Info</h2>
                 <div class="line"></div>
               </div>
-              <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
               <address class="contact-info">
-                <p><span class="fa fa-home"></span>3F/48 Sainik Colony Mazjid,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Opp. Sanjay General Store, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Faridabad NIT,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Haryana, India - 121001</p>
-                <p><span class="fa fa-phone"></span>+91 9050939808</p>
+                <p style="font-family: Arial, Helvetica, sans-serif;"><span class="fa fa-home"></span>3F/48 Sainik Colony Mazjid,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Faridabad NIT-3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Haryana, India - 121001</p>
+                <p style="font-family: Arial, Helvetica, sans-serif;"><span class="fa fa-phone"></span>+91 8168804355</p>
                 <p><span class="fa fa-envelope"></span>enquiry@apkadental.com</p>
               </address>
               </div>

@@ -547,7 +547,15 @@ img{
   top: 10%;
   width: 80%;
 }
-
+.slider-text-2 {
+	left: 0;
+	margin: 0 auto;
+	padding: 38px 0px 0px;
+	position: absolute;
+	right: 0;
+	top: 58%;
+	width: 80%;
+  }
 .slider-text h2 {
 	color: #f5f5f5;
 	font-size: 55px;
