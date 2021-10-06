@@ -1061,7 +1061,7 @@ img{
 .doctors-nav figcaption h2 {
 	text-transform: uppercase;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     -moz-transition: -moz-transform 0.3s;
     -o-transition: -o-transform 0.3s;
@@ -1093,7 +1093,7 @@ img{
     -ms-transform: translatey(50px);
     -o-transform: translatey(50px);
     -webkit-transform: translatey(50px);
-    transform: translatey(50px)
+    transform: translatey(26px)
 }
 .doctors-nav figure button {
 	position: absolute;
