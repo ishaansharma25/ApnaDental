@@ -1087,6 +1087,17 @@ img{
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s
 }
+
+/* @media(max-width:300px ) {
+	.whatsapp{
+	width: 20%;
+	}
+} */
+/* @media(max-width:1200px ) {
+	.whatsapp{
+	width: 8%;
+	}
+} */
 .doctors-nav figcaption h2,
 .doctors-nav figcaption p {
 	-moz-transform: translatey(50px);
