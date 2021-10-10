@@ -2771,6 +2771,10 @@ a.gallery-iteam:hover .image-effect::before {
 	margin: 0px 33%;
 }
 @media(max-width:1199px ){
+	.doctors-nav figcaption h2,
+	.doctors-nav figcaption p {
+		transform: translatey(-26px)
+	}
 	#video{
 		margin: 0px 29%;
 	}
@@ -2786,7 +2790,11 @@ a.gallery-iteam:hover .image-effect::before {
 }
 
 
-@media(max-width:991px ){	
+@media(max-width:991px ){
+	.doctors-nav figcaption h2,
+	.doctors-nav figcaption p {
+		transform: translatey(-26px)
+	}	
 	#video{
 		margin: 0px 21%;
 	}
@@ -2827,6 +2835,10 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:767px ){
+	.doctors-nav figcaption h2,
+.doctors-nav figcaption p {
+    transform: translatey(-26px)
+}
 	#video{
 		margin: 0px 19%;
 	}
@@ -2871,6 +2883,10 @@ a.gallery-iteam:hover .image-effect::before {
 }
 
 @media(max-width:560px ){
+	.doctors-nav figcaption h2,
+.doctors-nav figcaption p {
+    transform: translatey(-15px)
+}
 	#video{
 		margin: 0px 13%;
 	}
@@ -2914,7 +2930,11 @@ a.gallery-iteam:hover .image-effect::before {
 .slider-text p {font-size: 20px;}
 }
 
-@media(max-width:480px ){	
+@media(max-width:480px ){
+	.doctors-nav figcaption h2,
+.doctors-nav figcaption p {
+    transform: translatey(165px)
+}	
 	#video{
 		margin: 0px 3%;
 		height: 320px !important;
@@ -2936,6 +2956,10 @@ a.gallery-iteam:hover .image-effect::before {
 
 
 @media(max-width:360px ){
+	.doctors-nav figcaption h2,
+.doctors-nav figcaption p {
+    transform: translatey(131px)
+}
 	#video{
 		margin: 0px 3%;
 		height: 280px !important;
