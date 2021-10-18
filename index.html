@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_8yP1vBppa681luwyAHFNC");
+})();
+$('button#submitApprove').on("click", function(event) {
+    // submit form via ajax, then
+
+    event.preventDefault();
+    $('#approveDialog').modal( 'hide' );
+});
+</script>
+  <script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_xg5rthk', 'template_821hdd6', this)
+                .then(function() {
+                  event.preventDefault();
+                  $('#myModal').modal( 'hide' );
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                }).then(function(){alert("Appointment Request Sent")});
+        });
+    }
+    
+</script>
     <!--=============================================== 
     Template Design By WpFreeware Team.
     Author URI : http://www.wpfreeware.com/
@@ -12,16 +44,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>Apka Dental</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     
      <script type="text/javascript">
       function sendEmail() {
         console.log("Code has reached here");
         Email.send({
-          Host: "smtp.zoho.com",
-          Username: "info@apkadentist.in",
+          Host: "smtp.gmail.com",
+          Username: "apkadentistappointment@gmail.com",
           Password: "Ishsharma@01",
-          To: "sagar.sharma@apkadentist.in",
-          From: "info@apkadentist.in",
+          To: "eshaansharma3@gmail.com",
+          From: "apkadentistappointment@gmail.com",
           Subject: "Sending Email using javascript",
           Body: "Well that was easy!!",
         })
@@ -152,6 +184,7 @@
     <!--=========== END HEADER SECTION ================-->   
 
     <!--=========== BEGIN SLIDER SECTION ================-->
+    <div id="successMessage" style="display: none;"> Success Message</div>
     <section id="sliderArea">
       <!-- Start slider wrapper -->      
       <div class="top-slider">
@@ -184,7 +217,7 @@
         </div>
         <a href="https://api.whatsapp.com/send?phone=919050939808&text=Hey%20Apka%20Dentist%2C%20I%20want%20to%20Book%20Appointment%20With%20Dentist">
 
-          <img  id="whatsapp" src="images/WhatsApp.svg.png" style="display: inline;z-index: 5000;position: fixed;"></a>
+          <img  id="whatsapp" src="images/whatsapp-footer.png" style="display: inline;z-index: 5000;position: fixed;"></a>
         <!-- End 2nd slide --> 
     
     
@@ -265,58 +298,81 @@
                     </div>
                     <div class="modal-body">
                       <div class="appointment-area">
-                        <form class="appointment-form">
+                        <!-- <form  id="contact-form">
                           <div class="row">
                             <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your name <span class="required">*</span>
+                              <label class="control-label" >Your name <span class="required">*</span>
                               </label>
-                              <input type="text" class="wp-form-control wpcf7-text" placeholder="Your name">
+                              <input type="text" class="wp-form-control wpcf7-text" name="user_name" placeholder="Your name">
                             </div>
                             <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Email <span class="required">*</span>
+                              <label class="control-label" >Your Email <span class="required">*</span>
                               </label>
-                              <input type="mail" class="wp-form-control wpcf7-email" placeholder="Email address">  
+                              <input type="mail" name="user_email" class="wp-form-control wpcf7-email" placeholder="Email address">  
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Birth <span class="required">*</span>
+                              <label class="control-label" >Your Age <span class="required">*</span>
                               </label>
-                              <input type="text" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy">
+                              <input type="text" name="user_age" class="wp-form-control wpcf7-text" placeholder="In Numbers">
                             </div>
                             <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Phone <span class="required">*</span>
+                              <label class="control-label" >Your Phone <span class="required">*</span>
                               </label>
-                              <input type="text" class="wp-form-control wpcf7-text" placeholder="Phone No">  
+                              <input type="text" name="user_phone" class="wp-form-control wpcf7-text" placeholder="Phone No">  
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Appointment Date <span class="required">*</span>
+                              <label class="control-label" name="user_appointment_date">Appointment Date <span class="required">*</span>
                               </label>
                               <input type="text" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy">
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Select Department <span class="required">*</span>
-                              </label>
-                              <select class="wp-form-control wpcf7-select">
-                                <option val="1">Dental</option>
-                                <option val="2">cardiology</option>
-                                <option val="3">neurology</option>
-                                <option val="4">Drugstore</option>
-                                <option val="5">x-ray</option>
-                                <option val="6">birth</option>
-                                <option val="7">general</option>
-                                <option val="8">testing</option>
-                                <option val="9">first-aid</option>
-                                <option val="10">immunizations</option><option val="11">pulmonary</option>
-                              </select> 
-                            </div>
+                            
                           </div>         
-                          <input type="text" class="wp-form-control wpcf7-text" placeholder="Subject">
                           <textarea class="wp-form-control wpcf7-textarea" cols="30" rows="10" placeholder="What would you like to tell us"></textarea>
-                         <button class="wpcf7-submit button--itzel" type="submit" onclick="sendEmail()"><i class="button__icon fa fa-share"></i><span>Book Appointment</span></button>  
-                        </form>
+                         <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Book Appointment</span></button>  
+                        </form> -->
+                        <form id="contact-form">
+                          <input type="hidden" name="contact_number">
+                         <div class="row">
+                          <div class="col-md-6 col-sm-6">
+                          <label class="control-label" >Your name <span class="required">*</span>
+                          </label>
+                          <input type="text" class="wp-form-control wpcf7-text" name="user_name" placeholder="Your name" required>
+                          </div>
+                          <div class="col-md-6 col-sm-6">
+                          <label class="control-label" >Your Email
+                          </label>
+                          <input type="mail" name="user_email" class="wp-form-control wpcf7-email" placeholder="Email address">  
+                        </div>
+                         </div>
+                         <div class="row">
+                          <div class="col-md-6 col-sm-6">
+                            <label class="control-label" >Your Age <span class="required">*</span>
+                            </label>
+                            <input type="text" name="user_age" class="wp-form-control wpcf7-text" placeholder="In Numbers" required>
+                          </div>
+                          <div class="col-md-6 col-sm-6">
+                            <label class="control-label" >Your Phone <span class="required">*</span>
+                            </label>
+                            <input type="text" name="user_phone" class="wp-form-control wpcf7-text" placeholder="Phone No" required>  
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-6">
+                            <label class="control-label" name="user_appointment_date">Appointment Date <span class="required">*</span>
+                            </label>
+                            <input type="text" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy" required>
+                          </div>
+                          
+                        </div>  
+                        <textarea class="wp-form-control wpcf7-textarea" name="message" cols="30" rows="10" placeholder="What would you like to tell us"></textarea>
+
+                          <button class="wpcf7-submit button--itzel" type="submit" onclick="sendEmail()" id=submitApprove><i class="button__icon fa fa-share"></i><span>Book Appointment</span></button>  
+
+                      </form>
                       </div>
                     </div>                    
                   </div><!-- /.modal-content -->
@@ -437,10 +493,7 @@
                     <div class="whychoose-singleslide">
                       <img src="images/choose-us-img1.jpg" alt="img">
                     </div>
-                    <!-- <form method="post">
-                      <input type="button" value="Send Email" 
-                          onclick="sendEmail()" />
-                    </form> -->
+                    
                     <div class="whychoose-singleslide">
                       <img src="images/choose-us-img2.jpg" alt="img">
                     </div>
@@ -738,6 +791,15 @@
                     <source src="movie.ogg" type="video/ogg">
                   Your browser does not support the video tag.
                   </video>
+                                 
+                </ul>
+                <ul class="testimonial-nav">
+                  
+                  <video id="video" width="400" height="400" controls>
+                    <source src="images/videos/dental-video-2.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
                                   
                 </ul>
               </div>
@@ -892,4 +954,5 @@
     <script src="js/custom.js"></script>
      
   </body>
+ 
 </html>

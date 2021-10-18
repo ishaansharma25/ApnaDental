@@ -43,6 +43,17 @@ font-family: 'Habibi', serif;
 overflow-x: hidden !important;
 }
 
+#successMessage{
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	max-width: 480px;
+	z-index: 2000;
+	opacity: 0.9;
+	border-radius: 2px;
+	display : none;
+  }  
+
 .navbar-brand img {
 	width: 140%;
 	height: 360%;
@@ -2763,8 +2774,8 @@ a.gallery-iteam:hover .image-effect::before {
 =====================///////////////////////*/
 
 #whatsapp{
-	width: 6% !important;
-	top: 75%; left: 90%;
+	width: 20% !important;
+	top: 75%; left: 80%;
 	}
 
 #video{
@@ -2779,7 +2790,7 @@ a.gallery-iteam:hover .image-effect::before {
 		margin: 0px 29%;
 	}
 	#whatsapp{
-		width: 8% !important;
+		width: 20% !important;
 		top: 75%; left: 80%;
 		}
   .navbar-default .navbar-nav > li > a {padding: 18px 6px;font-size: 13px;}
@@ -2799,8 +2810,8 @@ a.gallery-iteam:hover .image-effect::before {
 		margin: 0px 21%;
 	}
 	#whatsapp{
-		width: 13% !important;
-		top: 75%; left: 84%;
+		width: 34% !important;
+		top: 75%; left: 64%;
 		}
   .navbar-header {float: none;text-align: center;}
   .navbar-brand {display: inline-block;float: none;font-size: 25px;width: 290px;}
@@ -2843,8 +2854,8 @@ a.gallery-iteam:hover .image-effect::before {
 		margin: 0px 19%;
 	}
 	#whatsapp{
-		width: 13% !important;
-		top: 75%; left: 80%;
+		width: 25% !important;
+		top: 75%; left: 70%;
 		}
 	.navbar-brand img {
 		width: 100%;
@@ -2891,8 +2902,8 @@ a.gallery-iteam:hover .image-effect::before {
 		margin: 0px 13%;
 	}
 	#whatsapp{
-		width: 16% !important;
-		top: 75%; left: 80%;
+		width: 30% !important;
+		top: 75%; left: 70%;
 		}
 	.navbar-brand img {
 		width: 93%;
@@ -2941,8 +2952,8 @@ a.gallery-iteam:hover .image-effect::before {
 		width: 320px !important;
 	}
 	#whatsapp{
-		width: 16% !important;
-		top: 75%; left: 80%;
+		width: 40% !important;
+		top: 75%; left: 57%;
 		}
 .sl-slider h2 {font-size: 22px;line-height: 25px;}
 .sl-slider p {font-size: 16px;}
@@ -2966,8 +2977,8 @@ a.gallery-iteam:hover .image-effect::before {
 		width: 280px !important;
 	}
 	#whatsapp{
-		width: 20% !important;
-		top: 75%; left: 80%;
+		width: 40% !important;
+		top: 75%; left: 58%;
 		}
 .navbar-brand img {
 		width: 100%;
@@ -3015,8 +3026,8 @@ a.gallery-iteam:hover .image-effect::before {
 		width: 250px !important;
 	}
 	#whatsapp{
-		width: 20% !important;
-		top: 75%; left: 80%;
+		width: 40% !important;
+		top: 75%; left: 65%;
 		}
 	.navbar-brand img {
 		width: 100%;
@@ -3065,8 +3076,8 @@ a.gallery-iteam:hover .image-effect::before {
 		width: 270px !important;
 	}
 	#whatsapp{
-		width: 20% !important;
-		top: 80%; left: 80%;
+		width: 37% !important;
+		top: 80%; left: 60%;
 		}
 .navbar-brand {width: 240px;}	
 .blog-breadcrumbs-right .breadcrumb > li a {font-size: 12px;}	
