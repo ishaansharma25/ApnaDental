@@ -337,31 +337,36 @@ $('button#submitApprove').on("click", function(event) {
                         <form id="contact-form">
                           <input type="hidden" name="contact_number">
                          <div class="row">
-                          <div class="col-md-6 col-sm-6">
-                          <label class="control-label" >Your name <span class="required">*</span>
-                          </label>
-                          <input type="text" class="wp-form-control wpcf7-text" name="user_name" placeholder="Your name" required>
+                          <div class="col-md-12 col-sm-12">
+                            <label class="control-label" >Your Name
+                            </label>
+                            <input type="mail" name="user_name" class="wp-form-control wpcf7-email" placeholder="Your Name">  
                           </div>
-                          <div class="col-md-6 col-sm-6">
+                         </div>
+                         <div class="row">
+                          <div class="col-md-12 col-sm-12">
                           <label class="control-label" >Your Email
                           </label>
                           <input type="mail" name="user_email" class="wp-form-control wpcf7-email" placeholder="Email address">  
                         </div>
-                         </div>
-                         <div class="row">
-                          <div class="col-md-6 col-sm-6">
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12">
                             <label class="control-label" >Your Age <span class="required">*</span>
                             </label>
                             <input type="text" name="user_age" class="wp-form-control wpcf7-text" placeholder="In Numbers" required>
                           </div>
-                          <div class="col-md-6 col-sm-6">
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12">
                             <label class="control-label" >Your Phone <span class="required">*</span>
                             </label>
                             <input type="text" name="user_phone" class="wp-form-control wpcf7-text" placeholder="Phone No" required>  
                           </div>
                         </div>
+                  
                         <div class="row">
-                          <div class="col-md-6 col-sm-6">
+                          <div class="col-md-12 col-sm-12">
                             <label class="control-label" name="user_appointment_date">Appointment Date <span class="required">*</span>
                             </label>
                             <input type="text" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy" required>
